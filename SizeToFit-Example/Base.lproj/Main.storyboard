@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SizeToFit_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Plain text" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="T9q-Up-1Qx">
+                                <rect key="frame" x="16" y="20" width="288" height="200"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="999" constant="200" id="6Gr-17-HVP"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8nK-4H-M8X">
+                                <rect key="frame" x="16" y="470" width="118" height="90"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2aR-WI-Lxi">
+                                        <rect key="frame" x="0.0" y="0.0" width="118" height="30"/>
+                                        <state key="normal" title="Add more text"/>
+                                        <connections>
+                                            <action selector="actionAddMoreText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5da-K1-MMT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hmD-HB-6P5">
+                                        <rect key="frame" x="0.0" y="30" width="118" height="30"/>
+                                        <state key="normal" title="SizeToFit()"/>
+                                        <connections>
+                                            <action selector="actionSizeToFit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IXe-HI-h6x"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEn-XO-yBk">
+                                        <rect key="frame" x="0.0" y="60" width="118" height="30"/>
+                                        <state key="normal" title="Print sizeThatFits"/>
+                                        <connections>
+                                            <action selector="printSizeThatFits:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Q1H-Zz-bhA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Xd4-dy-4gz">
+                                <rect key="frame" x="204" y="500" width="96" height="60"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V8L-2o-fcn">
+                                        <rect key="frame" x="0.0" y="0.0" width="96" height="30"/>
+                                        <state key="normal" title="Increase font"/>
+                                        <connections>
+                                            <action selector="actionIncreaseFont:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d6L-qK-4GN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NF-BL-mLX">
+                                        <rect key="frame" x="0.0" y="30" width="96" height="30"/>
+                                        <state key="normal" title="Decrease font"/>
+                                        <connections>
+                                            <action selector="actionDecreaseFont:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NtT-C1-5EC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="y8K-kK-5ED">
+                                <rect key="frame" x="16" y="372" width="288" height="90"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="EN6-Sr-Mtj">
+                                        <rect key="frame" x="33" y="0.0" width="223" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Desired height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KbI-gs-tcd">
+                                                <rect key="frame" x="0.0" y="0.0" width="112" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cyc-Kk-DVh">
+                                                <rect key="frame" x="112" y="0.0" width="112" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ERD-Kk-Gkc">
+                                        <rect key="frame" x="33" y="30" width="223" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Desired width" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6AU-zA-Ust">
+                                                <rect key="frame" x="0.0" y="0.0" width="112" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5O6-GT-vmW">
+                                                <rect key="frame" x="112" y="0.0" width="112" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JhA-Go-TpT">
+                                        <rect key="frame" x="36" y="60" width="216" height="30"/>
+                                        <state key="normal" title="SizeToFit with presented values"/>
+                                        <connections>
+                                            <action selector="actionSizeToFitWithPresentedValues:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iui-1H-Rp3"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="6AU-zA-Ust" firstAttribute="width" secondItem="KbI-gs-tcd" secondAttribute="width" id="xRL-xi-YBN"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8nK-4H-M8X" firstAttribute="top" secondItem="y8K-kK-5ED" secondAttribute="bottom" constant="8" symbolic="YES" id="0gM-Ly-DuI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="lessThanOrEqual" secondItem="T9q-Up-1Qx" secondAttribute="bottom" constant="420" id="1F8-qr-Atq"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="8nK-4H-M8X" secondAttribute="bottom" constant="8" id="9MU-TV-9LV"/>
+                            <constraint firstItem="T9q-Up-1Qx" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="BNL-bT-Bcq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="y8K-kK-5ED" secondAttribute="trailing" id="HaN-iZ-ys0"/>
+                            <constraint firstItem="8nK-4H-M8X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ZoF-XC-sv2"/>
+                            <constraint firstItem="T9q-Up-1Qx" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cKA-H9-wWq"/>
+                            <constraint firstItem="y8K-kK-5ED" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cwJ-UY-Vt9"/>
+                            <constraint firstAttribute="trailing" secondItem="Xd4-dy-4gz" secondAttribute="trailing" constant="20" id="l6Y-Us-sNr"/>
+                            <constraint firstItem="T9q-Up-1Qx" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="lmb-5F-Ma1"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Xd4-dy-4gz" secondAttribute="bottom" constant="8" id="qfC-Sv-v8S"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="desiredHeightTextField" destination="Cyc-Kk-DVh" id="x0I-4R-C8f"/>
+                        <outlet property="desiredWidthTextField" destination="5O6-GT-vmW" id="wE9-QW-Jwv"/>
+                        <outlet property="textView" destination="T9q-Up-1Qx" id="8gG-c1-EBM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="299" y="363"/>
+        </scene>
+    </scenes>
+</document>
